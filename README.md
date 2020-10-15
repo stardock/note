@@ -37,3 +37,9 @@ route DELETE 172.105.221.0 mask 255.255.255.0
 route DELETE 18.195.48.0 mask 255.255.255.0
 ```
 
+## ssh密钥登录  
+```  
+ssh-keygen  ##一路回车
+ls .ssh/
+ssh-copy-id root@目标主机    ##拷贝公钥到目标主机
+```  
