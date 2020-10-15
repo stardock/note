@@ -43,3 +43,8 @@ ssh-keygen  ##一路回车
 ls .ssh/
 ssh-copy-id root@目标主机    ##拷贝公钥到目标主机
 ```  
+
+## Ansible  
+所有模块: https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html  
+`ansible all -m shell -a "ls /root"`  
+常用命令: shell
