@@ -43,6 +43,18 @@ ssh-keygen  ##一路回车
 ls .ssh/
 ssh-copy-id root@目标主机    ##拷贝公钥到目标主机
 ```  
+## Ac86u梅林固件自启动  
+/jffs/scripts 新增 firewall-start  
+```
+#!/bin/sh
+iptables -I INPUT -p tcp --dport 450 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1194 -j ACCEPT
+iptables -I INPUT -p tcp --dport 992 -j ACCEPT
+iptables -I INPUT -p tcp --dport 5555 -j ACCEPT
+iptables -I INPUT -p udp --dport 500 -j ACCEPT
+iptables -I INPUT -p udp --dport 4500 -j ACCEPT
+iptables -I INPUT -p udp --dport 1701 -j ACCEPT
+```  
 
 ## Ansible  
 所有模块: https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html  
