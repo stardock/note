@@ -61,4 +61,5 @@ iptables -I INPUT -p udp --dport 1701 -j ACCEPT
 `ansible all -m shell -a "ls /root"`  
 常用命令: shell, copy, file, yum, service/systemd, debug
 
-定义变量: /etc/ansible/hosts 中定义
+定义变量: /etc/ansible/hosts 中定义  
+在jinja里使用ansilble变量直接{{}}引用，使用ansible变量赋值jinja变量不用{{}}引用。  
